@@ -15,3 +15,12 @@
 - [Agora account](https://www.agora.io/en/)
 - Create new app & generate token
 - in src/constants.js you will need to update the values for agoraAppID, agoraAppToken, channelName
+- in src/constants.js add your firebase project config
+
+## Improvements
+
+- Load more for text chat
+- Add identity
+- add auto-format on commit with 'pre-commit'
+- Multiple "chat sessions" instead of everything dumbing in on collection on firebase
+  create new chatGroup & expire collection after a white
