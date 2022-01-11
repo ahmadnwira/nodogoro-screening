@@ -91,6 +91,7 @@ export function VideoChat() {
 
   return (
     <div style={{ padding: "0 8px", gridColumn: "auto / span 2" }}>
+      <h3>Participants - {users.length}</h3>
       {renderUserStream()}
       {renderParticipantsStreams()}
     </div>

@@ -8,3 +8,34 @@ body {
   background-color: #1e293b;
   color: #fffbeb;
 }
+
+button {
+  margin: 0px 8px;
+  outline: 0;
+  border: 0;
+  padding: 8px;
+}
+
+input {
+  padding: 8px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

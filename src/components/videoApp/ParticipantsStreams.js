@@ -13,18 +13,15 @@ export function ParticipantsStreams({ users }) {
   };
 
   return (
-    <div>
-      <h3>Participants - {users.length}</h3>
-      <div
-        style={{
-          display: "grid",
-          gridAutoRows: "220px",
-          gridTemplateColumns: "repeat(auto-fill, 220px)",
-          gap: "8px",
-        }}
-      >
-        {renderParticipants()}
-      </div>
+    <div
+      style={{
+        display: "grid",
+        gridAutoRows: "220px",
+        gridTemplateColumns: "repeat(auto-fill, 220px)",
+        gap: "8px",
+      }}
+    >
+      {renderParticipants()}
     </div>
   );
 }
