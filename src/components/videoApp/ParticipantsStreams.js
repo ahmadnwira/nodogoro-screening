@@ -19,7 +19,7 @@ export function ParticipantsStreams({ users }) {
         style={{
           display: "grid",
           gridAutoRows: "220px",
-          gridTemplateColumns: "repeat(3, .33fr)",
+          gridTemplateColumns: "repeat(auto-fill, 220px)",
           gap: "8px",
         }}
       >

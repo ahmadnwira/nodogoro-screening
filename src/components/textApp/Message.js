@@ -3,7 +3,7 @@ export function Message({ message }) {
     <div
       style={{
         border: "1px solid",
-        margin: "0 auto 16px",
+        margin: "0 0px 16px",
         maxWidth: "88%",
         padding: "8px",
       }}

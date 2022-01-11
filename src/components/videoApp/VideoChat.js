@@ -6,6 +6,8 @@ import {
   useMicrophoneAndCameraTracks,
 } from "../../lib/agora";
 
+import { updateUsersCount } from "../../lib/firebase";
+
 import { UserStream } from "./UserStream";
 import { ParticipantsStreams } from "./ParticipantsStreams";
 
@@ -39,6 +41,7 @@ export function VideoChat() {
 
       client.on("user-left", (user) => {
         setUsers((prevUsers) => prevUsers.filter((u) => u.uid !== user.uid));
+        updateUsersCount(-1);
       });
 
       try {
@@ -80,8 +83,14 @@ export function VideoChat() {
     return null;
   };
 
+  const getUsersCount = () => {
+    updateUsersCount(users.length);
+  };
+
+  useEffect(getUsersCount, [users]);
+
   return (
-    <div>
+    <div style={{ padding: "0 8px", gridColumn: "auto / span 2" }}>
       {renderUserStream()}
       {renderParticipantsStreams()}
     </div>
